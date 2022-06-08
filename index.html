@@ -7,7 +7,12 @@
 	<title>Document</title>
 </head>
 <body>
-
+	
+	<textarea id="notes" cols="30" rows="10"></textarea>
+	<br>
+	<button id="addItems">+ Eleman Ekle</button>
+	<br>
+	
 	<ul id="list">
 		<li>Test1</li>
 		<li>Test2</li>
@@ -15,9 +20,6 @@
 	</ul>
 	<br>
 	<button id="removeItems">+ Eleman Sil</button>
-	<button id="addItems">+ Eleman Ekle</button>
-	<br>
-	<textarea id="notes" cols="30" rows="10"></textarea>
 	<script>
 		const list = document.getElementById("list");
 		const addItems = document.getElementById("addItems");
@@ -27,7 +29,7 @@
 		addItems.addEventListener("click",function(){
 			var li = document.createElement("li");
 			li.innerText = notes.value;
-			list.appendChild(li);
+			list.prepend(li);
 		});
 
 		removeItems.addEventListener("click", function(){
