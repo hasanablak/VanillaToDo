@@ -33,9 +33,11 @@
 		});
 
 		removeItems.addEventListener("click", function(){
-			var lastLi = list.children[list.children.length -1];
+			//var lastLi = list.children[list.children.length -1];
+			var lastLi = list.children[0];
 			list.removeChild(lastLi);
 		});
+		
 	</script>
 </body>
 </html>
