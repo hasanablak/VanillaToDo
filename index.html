@@ -28,14 +28,18 @@
 
 		addItems.addEventListener("click",function(){
 			var li = document.createElement("li");
-			li.innerText = notes.value;
-			list.prepend(li);
+			if(notes.value==""){
+				alert("Lütfen yazı yazınız!");
+			}else{
+				li.innerText = notes.value;
+				list.prepend(li);
+			}
 		});
 
 		removeItems.addEventListener("click", function(){
 			//var lastLi = list.children[list.children.length -1];
-			var lastLi = list.children[0];
-			list.removeChild(lastLi);
+			var firstLi = list.children[0];
+			list.removeChild(firstLi);
 		});
 		
 	</script>
